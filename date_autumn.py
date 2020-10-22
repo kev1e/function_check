@@ -12,7 +12,8 @@ def date_autumn(dates):
             autumn_days.append(data)
     for i in range(len(autumn_days)):
         x = autumn_days[i].split('-')
-        if (abs(int(x[i][0]) - int(today_[0])) <= min_month) and (abs(int(x[i][2]) - int(today_[2])) <= min_year) and (abs(int(x[i][1]) - int(today_[1])) <= min_day):
+        if (abs(int(x[i][0]) - int(today_[0])) <= min_month) and (abs(int(x[i][2]) - int(today_[2])) <= min_year) and (
+                abs(int(x[i][1]) - int(today_[1])) <= min_day):
             min_month = abs(int(x[i][0]) - int(today_[0]))
             min_day = abs(int(x[i][1]) - int(today_[1]))
             min_year = abs(int(x[i][2]) - int(today_[2]))
