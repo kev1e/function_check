@@ -1,9 +1,9 @@
-def remove_palindroms(spells):
-    i = 0
-    while i != len(spells):
-        x = spells[i].upper().split()
-        a = ''.join(x)
-        if a == a[::-1]:
-            spells.pop(i)
+def remove_palindroms(list_):
+    word = 0
+    while word < len(list_):
+        x = str(list_[word]).lower().split()
+        element_list = "".join(x)
+        if element_list == element_list[::-1]:
+            list_.pop(word)
         else:
-            i += 1
+            word += 1
