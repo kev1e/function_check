@@ -1,0 +1,7 @@
+def goods_analysis(*args, in_sale=lambda x: "молоко" in x['название'].lower()):
+    correct = []
+    for i in range(len(args)):
+        if in_sale(args[i]):
+            correct.append(args[i])
+    x = sorted(correct, key=lambda x: x['цена'])
+    return x[0], x[1], x[2]
